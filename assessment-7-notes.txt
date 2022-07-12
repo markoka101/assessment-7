@@ -1,0 +1,26 @@
+﻿tinyArray timings:
+doublerAppend: 4.3 μs
+doublerInsert: 7.1 μs
+
+
+smallArray timings:
+doublerAppend: 6.8 μs
+doublerInsert 11.9 μs
+
+
+mediumArray timings:
+doublerAppend: 38 μs
+doublerInsert: 123.7 μs
+
+
+largeArray timings:
+doublerAppend: 405.3 μs
+doublerInsert: 7.6088 ms
+
+
+extraLargeArray timings:
+doublerAppend: 3.2174 ms
+doublerInsert: 952.1794  ms
+
+
+As the arrays get bigger the insert operation increases in time at a faster rate than append. This is because the runtime to append is O(1) while insert is O(n). This is because insert requires all the other elements to be shifted so we can add to the front.
